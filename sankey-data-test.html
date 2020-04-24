@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+var data = 
+[
+  {
+    "Survived": "Perished",
+    "Sex": "Male",
+    "Age": "Adult",
+    "Class": "Crew",
+    "value": 670
+  },
+  {
+    "Survived": "Perished",
+    "Sex": "Male",
+    "Age": "Adult",
+    "Class": "Third Class",
+    "value": 387
+  },
+  {
+    "Survived": "Perished",
+    "Sex": "Male",
+    "Age": "Adult",
+    "Class": "Second Class",
+    "value": 154
+  },
+  {
+    "Survived": "Perished",
+    "Sex": "Male",
+    "Age": "Adult",
+    "Class": "First Class",
+    "value": 118
+  },
+  {
+    "Survived": "Perished",
+    "Sex": "Male",
+    "Age": "Child",
+    "Class": "Third Class",
+    "value": 35
+  },
+  {
+    "Survived": "Perished",
+    "Sex": "Female",
+    "Age": "Adult",
+    "Class": "Crew",
+    "value": 3
+  },
+  {
+    "Survived": "Perished",
+    "Sex": "Female",
+    "Age": "Adult",
+    "Class": "Third Class",
+    "value": 89
+  },
+  {
+    "Survived": "Perished",
+    "Sex": "Female",
+    "Age": "Adult",
+    "Class": "Second Class",
+    "value": 13
+  },
+  {
+    "Survived": "Perished",
+    "Sex": "Female",
+    "Age": "Adult",
+    "Class": "First Class",
+    "value": 4
+  },
+  {
+    "Survived": "Perished",
+    "Sex": "Female",
+    "Age": "Child",
+    "Class": "Third Class",
+    "value": 17
+  },
+  {
+    "Survived": "Survived",
+    "Sex": "Male",
+    "Age": "Adult",
+    "Class": "Crew",
+    "value": 192
+  },
+  {
+    "Survived": "Survived",
+    "Sex": "Male",
+    "Age": "Adult",
+    "Class": "Third Class",
+    "value": 75
+  },
+  {
+    "Survived": "Survived",
+    "Sex": "Male",
+    "Age": "Adult",
+    "Class": "Second Class",
+    "value": 14
+  },
+  {
+    "Survived": "Survived",
+    "Sex": "Male",
+    "Age": "Adult",
+    "Class": "First Class",
+    "value": 57
+  },
+  {
+    "Survived": "Survived",
+    "Sex": "Male",
+    "Age": "Child",
+    "Class": "Third Class",
+    "value": 13
+  },
+  {
+    "Survived": "Survived",
+    "Sex": "Male",
+    "Age": "Child",
+    "Class": "Second Class",
+    "value": 11
+  },
+  {
+    "Survived": "Survived",
+    "Sex": "Male",
+    "Age": "Child",
+    "Class": "First Class",
+    "value": 5
+  },
+  {
+    "Survived": "Survived",
+    "Sex": "Female",
+    "Age": "Adult",
+    "Class": "Crew",
+    "value": 20
+  },
+  {
+    "Survived": "Survived",
+    "Sex": "Female",
+    "Age": "Adult",
+    "Class": "Third Class",
+    "value": 76
+  },
+  {
+    "Survived": "Survived",
+    "Sex": "Female",
+    "Age": "Adult",
+    "Class": "Second Class",
+    "value": 80
+  },
+  {
+    "Survived": "Survived",
+    "Sex": "Female",
+    "Age": "Adult",
+    "Class": "First Class",
+    "value": 140
+  },
+  {
+    "Survived": "Survived",
+    "Sex": "Female",
+    "Age": "Child",
+    "Class": "Third Class",
+    "value": 14
+  },
+  {
+    "Survived": "Survived",
+    "Sex": "Female",
+    "Age": "Child",
+    "Class": "Second Class",
+    "value": 13
+  },
+  {
+    "Survived": "Survived",
+    "Sex": "Female",
+    "Age": "Child",
+    "Class": "First Class",
+    "value": 1
+  }
+];
+
+
+var keys = ["Survived", "Sex", "Age", "Class"];
+
+function graph() {
+  let index = -1;
+  const nodes = [];
+  const nodeByKey = new Map;
+  const indexByKey = new Map;
+  const links = [];
+
+
+  for (const k of keys) {
+    for (const d of data) {
+      const key = JSON.stringify([k, d[k]]);
+      if (nodeByKey.has(key)) continue;
+      const node = {name: d[k]};
+      nodes.push(node);
+      nodeByKey.set(key, node);
+      indexByKey.set(key, ++index);
+    }
+  }
+
+
+
+  for (let i = 1; i < keys.length; ++i) {
+    const a = keys[i - 1];
+    const b = keys[i];
+    const prefix = keys.slice(0, i + 1);
+    const linkByKey = new Map;
+    for (const d of data) {
+      const names = prefix.map(k => d[k]);
+      const key = JSON.stringify(names);
+      const value = d.value || 1;
+      let link = linkByKey.get(key);
+      if (link) { link.value += value; continue; }
+      link = {
+        source: indexByKey.get(JSON.stringify([a, d[a]])),
+        target: indexByKey.get(JSON.stringify([b, d[b]])),
+        names,
+        value
+      };
+      links.push(link);
+      linkByKey.set(key, link);
+    }
+  }
+
+
+  return {nodes, links};
+}
+
+console.log(JSON.stringify(graph()));
+
+</script>
+
+</body>
+</html>
