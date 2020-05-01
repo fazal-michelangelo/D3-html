@@ -9,180 +9,254 @@
 <script type="text/javascript">
 
 
+// var data = 
+// [
+//   {
+//     "Survived": "Perished",
+//     "Sex": "Male",
+//     "Age": "Adult",
+//     "Class": "Crew",
+//     "value": 670
+//   },
+//   {
+//     "Survived": "Perished",
+//     "Sex": "Male",
+//     "Age": "Adult",
+//     "Class": "Third Class",
+//     "value": 387
+//   },
+//   {
+//     "Survived": "Perished",
+//     "Sex": "Male",
+//     "Age": "Adult",
+//     "Class": "Second Class",
+//     "value": 154
+//   },
+//   {
+//     "Survived": "Perished",
+//     "Sex": "Male",
+//     "Age": "Adult",
+//     "Class": "First Class",
+//     "value": 118
+//   },
+//   {
+//     "Survived": "Perished",
+//     "Sex": "Male",
+//     "Age": "Child",
+//     "Class": "Third Class",
+//     "value": 35
+//   },
+//   {
+//     "Survived": "Perished",
+//     "Sex": "Female",
+//     "Age": "Adult",
+//     "Class": "Crew",
+//     "value": 3
+//   },
+//   {
+//     "Survived": "Perished",
+//     "Sex": "Female",
+//     "Age": "Adult",
+//     "Class": "Third Class",
+//     "value": 89
+//   },
+//   {
+//     "Survived": "Perished",
+//     "Sex": "Female",
+//     "Age": "Adult",
+//     "Class": "Second Class",
+//     "value": 13
+//   },
+//   {
+//     "Survived": "Perished",
+//     "Sex": "Female",
+//     "Age": "Adult",
+//     "Class": "First Class",
+//     "value": 4
+//   },
+//   {
+//     "Survived": "Perished",
+//     "Sex": "Female",
+//     "Age": "Child",
+//     "Class": "Third Class",
+//     "value": 17
+//   },
+//   {
+//     "Survived": "Survived",
+//     "Sex": "Male",
+//     "Age": "Adult",
+//     "Class": "Crew",
+//     "value": 192
+//   },
+//   {
+//     "Survived": "Survived",
+//     "Sex": "Male",
+//     "Age": "Adult",
+//     "Class": "Third Class",
+//     "value": 75
+//   },
+//   {
+//     "Survived": "Survived",
+//     "Sex": "Male",
+//     "Age": "Adult",
+//     "Class": "Second Class",
+//     "value": 14
+//   },
+//   {
+//     "Survived": "Survived",
+//     "Sex": "Male",
+//     "Age": "Adult",
+//     "Class": "First Class",
+//     "value": 57
+//   },
+//   {
+//     "Survived": "Survived",
+//     "Sex": "Male",
+//     "Age": "Child",
+//     "Class": "Third Class",
+//     "value": 13
+//   },
+//   {
+//     "Survived": "Survived",
+//     "Sex": "Male",
+//     "Age": "Child",
+//     "Class": "Second Class",
+//     "value": 11
+//   },
+//   {
+//     "Survived": "Survived",
+//     "Sex": "Male",
+//     "Age": "Child",
+//     "Class": "First Class",
+//     "value": 5
+//   },
+//   {
+//     "Survived": "Survived",
+//     "Sex": "Female",
+//     "Age": "Adult",
+//     "Class": "Crew",
+//     "value": 20
+//   },
+//   {
+//     "Survived": "Survived",
+//     "Sex": "Female",
+//     "Age": "Adult",
+//     "Class": "Third Class",
+//     "value": 76
+//   },
+//   {
+//     "Survived": "Survived",
+//     "Sex": "Female",
+//     "Age": "Adult",
+//     "Class": "Second Class",
+//     "value": 80
+//   },
+//   {
+//     "Survived": "Survived",
+//     "Sex": "Female",
+//     "Age": "Adult",
+//     "Class": "First Class",
+//     "value": 140
+//   },
+//   {
+//     "Survived": "Survived",
+//     "Sex": "Female",
+//     "Age": "Child",
+//     "Class": "Third Class",
+//     "value": 14
+//   },
+//   {
+//     "Survived": "Survived",
+//     "Sex": "Female",
+//     "Age": "Child",
+//     "Class": "Second Class",
+//     "value": 13
+//   },
+//   {
+//     "Survived": "Survived",
+//     "Sex": "Female",
+//     "Age": "Child",
+//     "Class": "First Class",
+//     "value": 1
+//   }
+// ];
+
+
+
+// var data = 
+// [
+//     {
+//         "$Action": "LOGIN",
+//         "$DevSrcIP": "10.160.1.30",
+//         "$SubSystem": "AUTHENTICATION",
+//         "count_unique": 329
+//     },
+//     {
+//         "$Action": "LOGIN_FAIL",
+//         "$DevSrcIP": "10.160.1.30",
+//         "$SubSystem": "AUTHENTICATION",
+//         "count_unique": 184
+//     },
+//     {
+//         "$Action": "LOGOUT",
+//         "$DevSrcIP": "10.160.1.30",
+//         "$SubSystem": "AUTHENTICATION",
+//         "count_unique": 55
+//     },
+//     {
+//         "$Action": "CONFIG_CHNGD",
+//         "$DevSrcIP": "10.160.1.30",
+//         "$SubSystem": "ADMINISTRATION",
+//         "count_unique": 110
+//     },
+//     {
+//         "$Action": "USR_TIME_OUT",
+//         "$DevSrcIP": "10.160.1.30",
+//         "$SubSystem": "ADMINISTRATION",
+//         "count_unique": 63
+//     },
+//     {
+//         "$Action": "CONFIG_ERASD",
+//         "$DevSrcIP": "10.160.1.30",
+//         "$SubSystem": "ADMINISTRATION",
+//         "count_unique": 53
+//     },
+//     {
+//         "$Action": "FLTYP_DETECT",
+//         "$DevSrcIP": "10.160.1.30",
+//         "$SubSystem": "THREAT",
+//         "count_unique": 64
+//     },
+//     {
+//         "$Action": "VULN_EXPLOIT_DETECT",
+//         "$DevSrcIP": "10.160.1.30",
+//         "$SubSystem": "THREAT",
+//         "count_unique": 60
+//     },
+//     {
+//         "$Action": "URL_BLKD",
+//         "$DevSrcIP": "10.160.1.30",
+//         "$SubSystem": "THREAT",
+//         "count_unique": 44
+//     },
+//     {
+//         "$Action": "MLWR_CLBK",
+//         "$DevSrcIP": "10.160.1.30",
+//         "$SubSystem": "THREAT",
+//         "count_unique": 40
+//     }
+// ]
+
+
+
 var data = 
-[
-  {
-    "Survived": "Perished",
-    "Sex": "Male",
-    "Age": "Adult",
-    "Class": "Crew",
-    "value": 670
-  },
-  {
-    "Survived": "Perished",
-    "Sex": "Male",
-    "Age": "Adult",
-    "Class": "Third Class",
-    "value": 387
-  },
-  {
-    "Survived": "Perished",
-    "Sex": "Male",
-    "Age": "Adult",
-    "Class": "Second Class",
-    "value": 154
-  },
-  {
-    "Survived": "Perished",
-    "Sex": "Male",
-    "Age": "Adult",
-    "Class": "First Class",
-    "value": 118
-  },
-  {
-    "Survived": "Perished",
-    "Sex": "Male",
-    "Age": "Child",
-    "Class": "Third Class",
-    "value": 35
-  },
-  {
-    "Survived": "Perished",
-    "Sex": "Female",
-    "Age": "Adult",
-    "Class": "Crew",
-    "value": 3
-  },
-  {
-    "Survived": "Perished",
-    "Sex": "Female",
-    "Age": "Adult",
-    "Class": "Third Class",
-    "value": 89
-  },
-  {
-    "Survived": "Perished",
-    "Sex": "Female",
-    "Age": "Adult",
-    "Class": "Second Class",
-    "value": 13
-  },
-  {
-    "Survived": "Perished",
-    "Sex": "Female",
-    "Age": "Adult",
-    "Class": "First Class",
-    "value": 4
-  },
-  {
-    "Survived": "Perished",
-    "Sex": "Female",
-    "Age": "Child",
-    "Class": "Third Class",
-    "value": 17
-  },
-  {
-    "Survived": "Survived",
-    "Sex": "Male",
-    "Age": "Adult",
-    "Class": "Crew",
-    "value": 192
-  },
-  {
-    "Survived": "Survived",
-    "Sex": "Male",
-    "Age": "Adult",
-    "Class": "Third Class",
-    "value": 75
-  },
-  {
-    "Survived": "Survived",
-    "Sex": "Male",
-    "Age": "Adult",
-    "Class": "Second Class",
-    "value": 14
-  },
-  {
-    "Survived": "Survived",
-    "Sex": "Male",
-    "Age": "Adult",
-    "Class": "First Class",
-    "value": 57
-  },
-  {
-    "Survived": "Survived",
-    "Sex": "Male",
-    "Age": "Child",
-    "Class": "Third Class",
-    "value": 13
-  },
-  {
-    "Survived": "Survived",
-    "Sex": "Male",
-    "Age": "Child",
-    "Class": "Second Class",
-    "value": 11
-  },
-  {
-    "Survived": "Survived",
-    "Sex": "Male",
-    "Age": "Child",
-    "Class": "First Class",
-    "value": 5
-  },
-  {
-    "Survived": "Survived",
-    "Sex": "Female",
-    "Age": "Adult",
-    "Class": "Crew",
-    "value": 20
-  },
-  {
-    "Survived": "Survived",
-    "Sex": "Female",
-    "Age": "Adult",
-    "Class": "Third Class",
-    "value": 76
-  },
-  {
-    "Survived": "Survived",
-    "Sex": "Female",
-    "Age": "Adult",
-    "Class": "Second Class",
-    "value": 80
-  },
-  {
-    "Survived": "Survived",
-    "Sex": "Female",
-    "Age": "Adult",
-    "Class": "First Class",
-    "value": 140
-  },
-  {
-    "Survived": "Survived",
-    "Sex": "Female",
-    "Age": "Child",
-    "Class": "Third Class",
-    "value": 14
-  },
-  {
-    "Survived": "Survived",
-    "Sex": "Female",
-    "Age": "Child",
-    "Class": "Second Class",
-    "value": 13
-  },
-  {
-    "Survived": "Survived",
-    "Sex": "Female",
-    "Age": "Child",
-    "Class": "First Class",
-    "value": 1
-  }
-];
+[{"$Daemon":"mgd","$LogName":"JUNIPER-SRX","$LogType":"FIREWALL","$User":"root","count_unique":4597},{"$Daemon":"mgd","$LogName":"JUNIPER-SRX","$LogType":"FIREWALL","$User":"Altaf","count_unique":3558},{"$Daemon":"mgd","$LogName":"JUNIPER-SRX","$LogType":"FIREWALL","$User":"Hitesh","count_unique":1730},{"$Daemon":"mgd","$LogName":"JUNIPER-SRX","$LogType":"FIREWALL","$User":"10.50.100.22","count_unique":590},{"$Daemon":"checklogin","$LogName":"JUNIPER-SRX","$LogType":"FIREWALL","$User":"sachin","count_unique":589},{"$Daemon":"checklogin","$LogName":"JUNIPER-SRX","$LogType":"FIREWALL","$User":"Altaf","count_unique":564},{"$Daemon":"sshd","$LogName":"JUNIPER-SRX","$LogType":"FIREWALL","$User":"root","count_unique":609},{"$Daemon":"login","$LogName":"PALOALTO","$LogType":"FIREWALL","$User":"domain\\userid","count_unique":606}]
 
 
-var keys = ["Survived", "Sex", "Age", "Class"];
+
+// var keys = ["Survived", "Sex", "Age", "Class"];
+
+var keys = ["$Daemon", "$LogName", "$LogType", "$User", "count_unique"];
 
 function graph() {
   let index = -1;

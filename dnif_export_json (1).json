@@ -1,0 +1,62 @@
+[
+    {
+        "$Action": "LOGIN",
+        "$DevSrcIP": "10.160.1.30",
+        "$SubSystem": "AUTHENTICATION",
+        "count_unique": 329
+    },
+    {
+        "$Action": "LOGIN_FAIL",
+        "$DevSrcIP": "10.160.1.30",
+        "$SubSystem": "AUTHENTICATION",
+        "count_unique": 184
+    },
+    {
+        "$Action": "LOGOUT",
+        "$DevSrcIP": "10.160.1.30",
+        "$SubSystem": "AUTHENTICATION",
+        "count_unique": 55
+    },
+    {
+        "$Action": "CONFIG_CHNGD",
+        "$DevSrcIP": "10.160.1.30",
+        "$SubSystem": "ADMINISTRATION",
+        "count_unique": 110
+    },
+    {
+        "$Action": "USR_TIME_OUT",
+        "$DevSrcIP": "10.160.1.30",
+        "$SubSystem": "ADMINISTRATION",
+        "count_unique": 63
+    },
+    {
+        "$Action": "CONFIG_ERASD",
+        "$DevSrcIP": "10.160.1.30",
+        "$SubSystem": "ADMINISTRATION",
+        "count_unique": 53
+    },
+    {
+        "$Action": "FLTYP_DETECT",
+        "$DevSrcIP": "10.160.1.30",
+        "$SubSystem": "THREAT",
+        "count_unique": 64
+    },
+    {
+        "$Action": "VULN_EXPLOIT_DETECT",
+        "$DevSrcIP": "10.160.1.30",
+        "$SubSystem": "THREAT",
+        "count_unique": 60
+    },
+    {
+        "$Action": "URL_BLKD",
+        "$DevSrcIP": "10.160.1.30",
+        "$SubSystem": "THREAT",
+        "count_unique": 44
+    },
+    {
+        "$Action": "MLWR_CLBK",
+        "$DevSrcIP": "10.160.1.30",
+        "$SubSystem": "THREAT",
+        "count_unique": 40
+    }
+]
